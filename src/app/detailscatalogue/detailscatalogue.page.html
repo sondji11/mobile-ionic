@@ -1,0 +1,96 @@
+<ion-content [fullscreen]="true" >
+
+
+  <ion-header>
+    detailscatalogue
+</ion-header>
+<ion-button routerLink="#" >Ajouter Panier</ion-button> <br>
+
+
+  <ion-card>
+
+    <div class="container">
+      <div class="row">
+  
+      
+        <!-- <button>back</button> -->
+      
+          <div class="col-md-5">
+            
+              <div class="col-md-7">
+                <img src="data:image/png;base64,{{produitsdetails?.produit.image}}" class="card-img-top" alt="...">
+                <div class="project-info-box">
+                      <p><b>Nom:{{produitsdetails?.produit.nom}} </b> </p>
+                      <p><b>Prix:{{produitsdetails?.produit.prix}} fcfa</b> </p>
+                      <p><b>Ingredient:{{produitsdetails?.produit.ingredient}} </b> </p>
+  
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+      <!-- <ng-container *ngFor="let boissons of produitsdetails.boissons">
+        <img  src="data:image/png;base64,{{boissons.image}}" class="card-img-top" alt="...">
+        <span>{{boissons.nom}} </span>
+  
+   </ng-container> -->
+  
+  
+  </div>
+
+
+  </ion-card>
+
+
+
+
+
+<ion-card-header >
+
+  <ion-card-title>Boissons</ion-card-title>
+  <ion-card-subtitle> </ion-card-subtitle>
+</ion-card-header>
+
+<ion-card *ngFor="let boissons of produitsdetails.boissons">
+<ion-card-content   >
+
+<span>nom :{{boissons.nom}} </span> <br>
+<span> prix : fcfa </span>
+
+<img src="data:image/png;base64,{{boissons.image}}" alt="">
+<input type="checkbox" name="" id="">
+
+</ion-card-content>
+
+</ion-card>
+
+
+
+
+
+
+<ion-card-header >
+
+  <ion-card-title>Portions Frites</ion-card-title>
+  <ion-card-subtitle> </ion-card-subtitle>
+</ion-card-header>
+
+<ion-card *ngFor="let Frites of produitsdetails.portionfrites">
+<ion-card-content   >
+
+<span>nom :{{Frites.nom}} </span> <br>
+<span> prix :{{Frites.prix}} fcfa </span>
+
+<img src="data:image/png;base64,{{Frites.image}}" alt="">
+<input type="checkbox" name="" id="">
+
+</ion-card-content>
+
+</ion-card>
+
+
+
+</ion-content>
+
+
+

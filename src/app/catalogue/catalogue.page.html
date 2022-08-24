@@ -1,0 +1,64 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Catalogue
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+
+  <!-- <app-explore-container name="Tab 1 page"> -->
+
+    <ion-card>
+      <ion-slides pager="true" [options]="slideOpts" >
+        <!-- <h5>welcome</h5> <br> -->
+        <ion-slide *ngFor="let i of combiner">
+        <img src="data:image/png;base64,{{i.image}}" alt="">
+        </ion-slide>  
+      </ion-slides>
+      
+      <ion-item-divider>
+
+    
+  
+</ion-item-divider>
+<div class="btn">
+  <ion-button (click)="clickchanged('menu')" color="white" style="margin-left:2rem ;background-color:#EB4E3D ; border-radius: 25px ; ">Menu</ion-button>
+  <ion-button (click)="clickchanged('burger')" color="white" style="margin-left:2rem;;background-color:#EB4E3D ; border-radius: 25px;" >Burgers</ion-button>
+  <ion-button (click)="clickchanged('')" color="white" style="margin-left:2rem;;background-color:#EB4E3D; border-radius: 25px;">Catalogue</ion-button>
+</div>
+ 
+
+
+     <ion-card-header >
+
+        <ion-card-title>Hamburgers</ion-card-title>
+        <ion-card-subtitle> </ion-card-subtitle>
+      </ion-card-header>
+ 
+<ion-card *ngFor="let ctlg of combiner">
+  <ion-card-content  >
+
+    <span>nom :{{ctlg.nom}} </span> <br>
+  <span> prix :{{ctlg.prix}} fcfa </span>
+
+    <img src="data:image/png;base64,{{ctlg.image}}" alt="">
+
+    <ion-button routerLink="detailscatalogue/{{ctlg.id}}" color="white" style="margin-left:3rem;background-color: #EB4E3D; border-radius:10px ;" >Details</ion-button>
+</ion-card-content>
+
+</ion-card>
+  
+
+
+
+
+
+
+<!-- </app-explore-container> -->
+
+
+    
+   
